@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from selenium.webdriver.chrome.options import Options
 import os , bs4 , time , threading , redis
 
-load_dotenv()
+load_dotenv(encoding="utf-8")
 redis_r = redis.StrictRedis(host=os.getenv('REDIS_HOST'), port=os.getenv('REDIS_POST'), db=os.getenv('REDIS_DB'),
                             decode_responses=True)
 seller_id_list = []  # 放置抓到的賣家ID 用來比對是否重複
